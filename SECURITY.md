@@ -34,7 +34,7 @@ If you discover a vulnerability, please follow these steps:
 
 1\. Report the issue directly via the email:
 
-&nbsp;  -L00172635@atu.ie
+&nbsp;  -L00146628@atu.ie
 
 
 
