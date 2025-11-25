@@ -72,5 +72,15 @@ public class AppTest {
         int result = App.multiply(Integer.MAX_VALUE, 2);
         assertTrue(result < 0);  // Confirm wraparound
     }
-    
+
+    //Divide tests
+    @Test
+    void divideThrowsOnZero() {
+        assertThrows(IllegalArgumentException.class, () -> App.divide(10, 0));
+    }
+
+    @Test
+    void divideWorks() {
+        assertEquals(5, App.divide(10, 2));
+    }
 }

@@ -18,9 +18,17 @@ public class App {
         return a * b;
     }
 
+    //Divide function
+    public static int divide(int a, int b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("Division by zero is not allowed.");
+        }
+        return a / b;
+    }
+
     //Check if number is positive
     public static boolean isPositive(int x) {
     return x > 0;
-}
+    }
 
 }
