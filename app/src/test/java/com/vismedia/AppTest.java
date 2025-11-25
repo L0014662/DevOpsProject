@@ -1,6 +1,5 @@
-package app.src.test.java;
+package com.vismedia;
 
-import com.vismedia.App;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -35,5 +34,12 @@ public class AppTest {
         // This demonstrates wraparound behavior
         assertTrue(result < 0);
     }
+
+    @Test
+    void isPositiveWorks() {
+        assertTrue(App.isPositive(5));
+        assertFalse(App.isPositive(-10));
+    }
+    
     
 }
