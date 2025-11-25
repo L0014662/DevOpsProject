@@ -21,6 +21,7 @@ jobs:
 
       - name: Generate JavaDoc
         run: mvn -B javadoc:javadoc
+        working-directory: ./app
 
       - name: Upload JavaDoc artifact
         uses: actions/upload-artifact@v4
