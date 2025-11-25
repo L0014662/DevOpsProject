@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AppTest {
 
+    //Add function tests
     @Test
     void addReturnsCorrectSum() {
         assertEquals(12, App.add(5, 7));
@@ -36,10 +37,40 @@ public class AppTest {
     }
 
     @Test
+    void addHandlesZeroBothSides() {
+        assertEquals(0, App.add(0, 0));
+    }
+
+    //isPositive tests
+    @Test
     void isPositiveWorks() {
         assertTrue(App.isPositive(5));
         assertFalse(App.isPositive(-10));
     }
-    
+
+    //Multiply tests
+
+    @Test
+    void multiplyWorks() {
+        assertEquals(15, App.multiply(3, 5));
+    }
+
+    @Test
+    void multiplyNegativeNumbers() {
+        assertEquals(-15, App.multiply(3, -5));
+        assertEquals(15, App.multiply(-3, -5));
+    }
+
+    @Test
+    void multiplyByZero() {
+        assertEquals(0, App.multiply(0, 99));
+        assertEquals(0, App.multiply(99, 0));
+    }
+
+    @Test
+    void multiplyOverflow() {
+        int result = App.multiply(Integer.MAX_VALUE, 2);
+        assertTrue(result < 0);  // Confirm wraparound
+    }
     
 }

@@ -13,6 +13,11 @@ public class App {
         return a + b;
     }
 
+    //Multiply function
+    public static int multiply(int a, int b) {
+        return a * b;
+    }
+
     //Check if number is positive
     public static boolean isPositive(int x) {
     return x > 0;
