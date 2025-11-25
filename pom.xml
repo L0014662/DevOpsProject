@@ -1,17 +1,19 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>ie.yourname.vismedia</groupId>
-  <artifactId>demo-feature</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
-  <properties>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
-    <junit.jupiter.version>5.10.0</junit.jupiter.version>
-    <jacoco.version>0.8.10</jacoco.version>
-  </properties>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <dependencies>
+    <groupId>com.vismedia</groupId>
+    <artifactId>app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <dependencies>
     <!-- JUnit 5 -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -76,4 +78,5 @@
     </plugin>
     </plugins>
   </build>
+
 </project>

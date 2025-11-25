@@ -1,7 +1,7 @@
-package src.main.java;
-public class App 
-{
-    public static void main(String[] args) 
+package com.vismedia;
+
+public class App {
+     public static void main(String[] args) 
     {
         
         int a = 5, b = 7;
@@ -14,4 +14,5 @@ public class App
     {
         return a + b;
     }
+
 }
