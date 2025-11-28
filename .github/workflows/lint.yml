@@ -2,24 +2,23 @@ name: Lint
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
-  checkstyle:
+  spotless:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up JDK
+      - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
 
-      - name: Run Checkstyle
-        run: mvn -B checkstyle:check
+      - name: Verify formatting
+        run: mvn -B spotless:check
         working-directory: ./app
