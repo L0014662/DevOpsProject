@@ -1,8 +1,8 @@
-\# Security Policy
+# Security Policy
 
 
 
-\## Supported Versions
+## Supported Versions
 
 
 
@@ -24,7 +24,7 @@ These are the current version being supported with security updates.
 
 
 
-\## Reporting a Vulnerability
+## Reporting a Vulnerability
 
 
 
@@ -75,8 +75,7 @@ If you discover a vulnerability, please follow these steps:
 ---
 
 
-
-\## Security best practices
+## Security best practices
 
 
 
