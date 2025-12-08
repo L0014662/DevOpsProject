@@ -110,6 +110,24 @@ Adding 5 plus 7 equals: 12
 10 divivded by 2 equals: 5
 5 is a positive number? - true
 ```
+---
+# Logging
+This project includes simple *Java Util Logging (JUL) setup to provide debugging and monitoring during the runtime of `App.java` using `java.util.logging.Logger`.
+The logging can be configured through an external file `logging.properties` which allows is stored in the repo.
+The Logger records:
+- When each mathematical operation (add, multiply,divide, isPositive) is executed
+- Runtime information of the `main()` function
+
+The Logger is also intergrated with Docker: 
+- The logging configuration file `logging.properties` is automatically loaded
+- When the container is buildt and run the log messasges should appear in the output terminal. 
+
+Logging can be run locally with:
+```bash
+mvn clean package
+java "-Djava.util.logging.config.file=logging.properties" -jar target/app-1.0-SNAPSHOT.jar
+```
+---
 # License
 
 This project is released under the **MIT License**.  
