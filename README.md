@@ -9,14 +9,14 @@ For this project, I've decided to use **Trunk-Based Development (TBD)** that mak
 This strategy allows for smaller and frequent changes as opposed to larger risker merges, less likely to cause merge conflicts and is suitable for the Continuous Integration workflow. Branches should be deleted after in order to keep the repo clean.
 
 ### Branch Naming Convention
-```as
+```
 - feature/<task-name>
 - fix/<bug-name>
 - test/<testing-task>
 - docs/<documentation-change>
 ```
 Examples:
-```as
+```bash
 - feature/add-tests
 - docs/update-readme
 - fix/division-by-zero
@@ -24,19 +24,19 @@ Examples:
 ### Commit Messages
 
 Commit messages should follow this format:
-```as
+```
 <type>: <description>
 ```
 
 Examples:
-```as
+```bash
 -test: add multiply function edge case tests
 -docs: create SECURITY.md and CODE_OF_CONDUCT.md
 -ci: configure JavaDoc workflow
 ```
 
 Acceptable Commit types:
-```as
+```bash
 - `feat`
 - `fix`
 - `docs`
@@ -44,6 +44,17 @@ Acceptable Commit types:
 - `test`
 - `refactor`
 ```
+---
+# Building the Project via Maven
+The project can be built locally using the following code in the terminal:
+```bash
+mvn clean package
+```
+-This complies the `App.java` into `.class`
+-Creates test reports at `app/target/surefire-reports/`
+-Generates JaCoCo coverage reports at `app/target/site/jacoco/`
+-Java documentation at `app/target/site/apidocs/`
+-Compiled JAR is saved at `app/target/app-1.0-SNAPSHOT.jar`
 ---
 # Current Implementation
 
@@ -64,11 +75,41 @@ Spotless is used to implement linting into the project which helps to clean whit
 If formatting fails, the workflow block emerges.
 
 To fix formatting locally:
-```as
+```bash
 mvn spotless:apply
 ```
 ---
+# Running Local Tests
+Requires Maven installed.
+The following command runs the JUnit tests:
+```bash
+mvn clean test
+```
+---
+# Docker
+This project includes a Dockerfile that packages the project program into a runnable JAR file. This is to ensure consistent execution across any environment.
 
+### Building the Docker image
+Note: This requires Docker to be already installed on your machine.
+Naviagate to `app` directory and run the following code in the terminal:
+```bash
+cd app
+docker build -t devopsproject .
+```
+This will run Maven inside your local build and build a Docker image called  `devopsproject`.
+
+### Running the Docker container
+Run the following code in the terminal:
+```bash
+docker run --rm devopsproject
+```
+The expected output should be:
+```
+Adding 5 plus 7 equals: 12
+5 multiplied by 7 equals: 35
+10 divivded by 2 equals: 5
+5 is a positive number? - true
+```
 # License
 
 This project is released under the **MIT License**.  

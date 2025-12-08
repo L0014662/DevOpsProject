@@ -3,8 +3,11 @@ package com.vismedia;
 public class App {
   public static void main(String[] args) {
 
-    int a = 5, b = 7;
+    int a = 5, b = 7, c = 10, d = 2;
     System.out.println("Adding " + a + " plus " + b + " equals: " + add(a, b));
+    System.out.println(a + " multiplied by " + b + " equals: " + multiply(a, b));
+    System.out.println(c + " divivded by " + d + " equals: " + divide(c, d));
+    System.out.println(a + " is a positive number? - " + isPositive(a));
   }
 
   // Add function
