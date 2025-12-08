@@ -50,11 +50,11 @@ The project can be built locally using the following code in the terminal:
 ```bash
 mvn clean package
 ```
--This complies the `App.java` into `.class`
--Creates test reports at `app/target/surefire-reports/`
--Generates JaCoCo coverage reports at `app/target/site/jacoco/`
--Java documentation at `app/target/site/apidocs/`
--Compiled JAR is saved at `app/target/app-1.0-SNAPSHOT.jar`
+- This complies the `App.java` into `.class`
+- Creates test reports at `app/target/surefire-reports/`
+- Generates JaCoCo coverage reports at `app/target/site/jacoco/`
+- Java documentation at `app/target/site/apidocs/`
+- Compiled JAR is saved at `app/target/app-1.0-SNAPSHOT.jar`
 ---
 # Current Implementation
 
