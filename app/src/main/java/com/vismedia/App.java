@@ -1,11 +1,12 @@
 package com.vismedia;
 
-import java.util.logging.Logger;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class App {
 
   private static final Logger logger = Logger.getLogger(App.class.getName());
+
   public static void main(String[] args) {
 
     logger.info("Application started.");
@@ -19,10 +20,10 @@ public class App {
 
     try {
       System.out.println(c + " divivded by " + d + " equals: " + divide(c, d));
-    } catch (ArithmeticException ex ) {
+    } catch (ArithmeticException ex) {
       logger.log(Level.SEVERE, "Error during division operation", ex);
     }
-    
+
     System.out.println(a + " is a positive number? - " + isPositive(a));
     logger.info("Application finished");
   }
